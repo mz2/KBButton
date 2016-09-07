@@ -12,7 +12,7 @@
 @implementation KBButton
 
 - (void) setKbButtonType:(BButtonType)type {
-    [[self cell] setButtonType:type];
+    [[self cell] setKbButtonType:type];
 }
 
 - (BButtonType)kbButtonType {
