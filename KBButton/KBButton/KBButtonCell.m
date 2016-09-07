@@ -11,7 +11,7 @@
 
 @implementation KBButtonCell
 
-- (void)setKBButtonType:(BButtonType)type {
+- (void)setButtonType:(BButtonType)type {
     [[NSGraphicsContext currentContext] saveGraphicsState];
     kbButtonType = type;
     [[NSGraphicsContext currentContext] restoreGraphicsState];

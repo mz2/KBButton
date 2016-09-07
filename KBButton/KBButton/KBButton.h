@@ -12,6 +12,6 @@
 
 @interface KBButton : NSButton
 
-- (void) setKBButtonType:(BButtonType)type;
+- (void) setButtonType:(BButtonType)type;
 
 @end

@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 Kyle Bock. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+@import Cocoa;
 
-typedef enum {
+typedef NS_ENUM(NSUInteger, BButtonType) {
     BButtonTypeDefault = 0,
     BButtonTypePrimary,
     BButtonTypeInfo,
@@ -16,11 +16,14 @@ typedef enum {
     BButtonTypeWarning,
     BButtonTypeDanger,
     BButtonTypeInverse,
-} BButtonType;
+};
 
 @interface KBButtonCell : NSButtonCell {
     NSColor *_color;
     BButtonType kbButtonType;
 }
+
+- (void)setButtonType:(BButtonType)type;
+
 @end
 
