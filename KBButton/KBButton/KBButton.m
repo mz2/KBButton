@@ -11,8 +11,12 @@
 
 @implementation KBButton
 
-- (void) setButtonType:(BButtonType)type {
+- (void) setKbButtonType:(BButtonType)type {
     [[self cell] setButtonType:type];
+}
+
+- (BButtonType)kbButtonType {
+    return [[self cell] kbButtonType];
 }
 
 - initWithCoder: (NSCoder *)origCoder

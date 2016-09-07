@@ -13,13 +13,13 @@
 @synthesize defaultButton, primaryButton, infoButton, successButton, warningButton, dangerButton, inverseButton;
 
 - (void)awakeFromNib {
-    [[defaultButton cell] setButtonType:BButtonTypeDefault];
-    [[primaryButton cell] setButtonType:BButtonTypePrimary];
-    [[infoButton cell] setButtonType:BButtonTypeInfo];
-    [[successButton cell] setButtonType:BButtonTypeSuccess];
-    [[warningButton cell] setButtonType:BButtonTypeWarning];
-    [[dangerButton cell] setButtonType:BButtonTypeDanger];
-    [[inverseButton cell] setButtonType:BButtonTypeInverse];
+    [[defaultButton cell] setKbButtonType:BButtonTypeDefault];
+    [[primaryButton cell] setKbButtonType:BButtonTypePrimary];
+    [[infoButton cell] setKbButtonType:BButtonTypeInfo];
+    [[successButton cell] setKbButtonType:BButtonTypeSuccess];
+    [[warningButton cell] setKbButtonType:BButtonTypeWarning];
+    [[dangerButton cell] setKbButtonType:BButtonTypeDanger];
+    [[inverseButton cell] setKbButtonType:BButtonTypeInverse];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification

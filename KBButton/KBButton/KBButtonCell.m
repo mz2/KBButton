@@ -11,14 +11,14 @@
 
 @implementation KBButtonCell
 
-- (void)setButtonType:(BButtonType)type {
+- (void)setKbButtonType:(BButtonType)type {
     [[NSGraphicsContext currentContext] saveGraphicsState];
-    kbButtonType = type;
+    _kbButtonType = type;
     [[NSGraphicsContext currentContext] restoreGraphicsState];
 }
 
-- (NSColor*)getColorForButtonType {
-    switch (kbButtonType) {
+- (NSColor *)getColorForKBButtonType {
+    switch (self.kbButtonType) {
         case BButtonTypeDefault:
             return [NSColor colorWithCalibratedRed:0.85f green:0.85f blue:0.85f alpha:1.00f];
             break;
@@ -49,7 +49,7 @@
     // corner radius
     CGFloat roundedRadius = 3.0f;
     
-    NSColor *color = [self getColorForButtonType];
+    NSColor *color = [self getColorForKBButtonType];
     
     // Draw darker overlay if button is pressed
     if([self isHighlighted]) {
@@ -99,7 +99,7 @@
     NSMutableAttributedString *attrString = [title mutableCopy];
     [attrString beginEditing];
     NSColor *titleColor;
-    if ([[self getColorForButtonType] isLightColor]) {
+    if ([[self getColorForKBButtonType] isLightColor]) {
         titleColor = [NSColor blackColor];
     } else {
         titleColor = [NSColor whiteColor];

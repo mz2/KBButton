@@ -12,6 +12,6 @@
 
 @interface KBButton : NSButton
 
-- (void) setButtonType:(BButtonType)type;
+@property (readwrite) BButtonType kbButtonType;
 
 @end

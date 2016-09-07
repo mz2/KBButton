@@ -18,12 +18,10 @@ typedef NS_ENUM(NSUInteger, BButtonType) {
     BButtonTypeInverse,
 };
 
-@interface KBButtonCell : NSButtonCell {
-    NSColor *_color;
-    BButtonType kbButtonType;
-}
+@interface KBButtonCell : NSButtonCell 
 
-- (void)setButtonType:(BButtonType)type;
+@property (readonly) NSColor *color;
+@property (readwrite, nonatomic) BButtonType kbButtonType;
 
 @end
 
