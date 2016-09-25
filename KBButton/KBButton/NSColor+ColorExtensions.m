@@ -11,26 +11,26 @@
 @implementation NSColor (ColorExtensions)
 
 - (NSColor *)lightenColorByValue:(float)value {
-    float red = [self redComponent];
+    CGFloat red = [self redComponent];
     red += value;
     
-    float green = [self greenComponent];
+    CGFloat green = [self greenComponent];
     green += value;
     
-    float blue = [self blueComponent];
+    CGFloat blue = [self blueComponent];
     blue += value;
     
     return [NSColor colorWithCalibratedRed:red green:green blue:blue alpha:1.0f];
 }
 
 - (NSColor *)darkenColorByValue:(float)value {
-    float red = [self redComponent];
+    CGFloat red = [self redComponent];
     red -= value;
     
-    float green = [self greenComponent];
+    CGFloat green = [self greenComponent];
     green -= value;
     
-    float blue = [self blueComponent];
+    CGFloat blue = [self blueComponent];
     blue -= value;
     
     return [NSColor colorWithCalibratedRed:red green:green blue:blue alpha:1.0f];
